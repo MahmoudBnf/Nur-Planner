@@ -1,0 +1,4 @@
+# Windows needs CRLF in .bat files (labels like :fail break with LF); the .sh must stay LF.
+*.bat text eol=crlf
+*.sh text eol=lf
+*.png binary

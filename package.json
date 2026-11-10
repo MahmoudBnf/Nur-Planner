@@ -1,0 +1,30 @@
+{
+  "name": "nur-planner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local personal planner: daily/weekly objectives, focus, muhasabah review and salah times.",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n server,client -c cyan,magenta \"node --watch server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "app": "vite build && node server/index.js",
+    "backup": "node server/backup.js",
+    "pull-data": "node server/sync.js pull",
+    "push-data": "node server/sync.js push"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@fontsource-variable/inter": "^5.1.1",
+    "@fontsource/amiri": "^5.1.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "lucide-react": "^0.468.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "vite": "^6.0.7"
+  }
+}
